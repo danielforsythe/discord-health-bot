@@ -1,16 +1,12 @@
-import os
 import discord
 import logging
 from discord.ext import commands
 from discord.utils import get
-# from dotenv import load_dotenv
 
-# Pass token from .env using *arg parameter
-# TOKEN = os.getenv("BARCLYDEBOT_TOKEN")
 # Manually set bot token
-TOKEN = 'NzY4MTU1MzQ4NDAxNjUxNzUz.X48Wag.6u8x41SyFKW1nAGCKA9L7orTcHQ'
-# Channel ID
-MAIN_CHANNEL = 766659413775482903
+TOKEN = ''
+# Manually set Channel ID
+MAIN_CHANNEL = ''
 
 # Set command prefix for bot
 bot = commands.Bot(command_prefix = '!')
@@ -28,7 +24,7 @@ def get_members(ctx):
 @bot.event
 async def on_ready():
     channel = bot.get_channel(MAIN_CHANNEL)
-    await channel.send("BarclydeBot is now online!")
+    await channel.send("HealthBot is now online!")
     await bot.change_presence(activity=discord.Game(name="Use !help"))
 
 # Tell author's voice channel members to do a set
